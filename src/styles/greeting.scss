@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap);
+
+$primary-font: 'Open Sans';
+$champagne: #FFE8D6;
+$sand: #DDBEA9;
+$brass: #CB997E;
+$ash: #B7B7A4;
+$artichoke: #A5A58D;
+$ebony: #6B705C;
+$eerie: #151612;
+
+#greeting {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#say-hello {
+    margin-left: 25px;
+    color: $champagne;
+    font-size: 4em;
+    margin-bottom: 0;
+}
+
+#brief-bio {
+    margin-left: 25px;
+    color: $champagne;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    font: 100% $primary-font;
+    font-size: 1.5em;
+}

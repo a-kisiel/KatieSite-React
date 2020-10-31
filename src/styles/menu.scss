@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap);
+
+$primary-font: 'Open Sans';
+$champagne: #FFE8D6;
+$sand: #DDBEA9;
+$brass: #CB997E;
+$ash: #B7B7A4;
+$artichoke: #A5A58D;
+$ebony: #6B705C;
+$black-olive: #404337;
+$eerie: #151612;
+
+.menu-bar {
+    display: inline-flex;
+    flex-direction: row;
+    background-color: rgba($eerie, .8);
+    border-radius: 0 0 0 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 80%;
+    align-items: center;
+    float: right;
+}
+
+.menu-item {
+    color: $ash;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+a.menu-item:hover {
+    color: $sand;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 0;
+    z-index: 2;
+}
+
+.clear {
+    clear: both;
+}

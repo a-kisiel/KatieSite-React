@@ -1,12 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import About from './components/About.jsx';
-import Footer from './components/Footer.jsx';
-import Gallery from './components/Gallery.jsx'
-import Greeting from './components/Greeting.jsx';
-import Lightbox from './components/Lightbox.jsx';
-import MenuBar from './components/MenuBar.jsx';
-import './styles/main.scss';
+import About from '../components/About.jsx';
+import Footer from '../components/Footer.jsx';
+import Gallery from '../components/Gallery.jsx'
+import Greeting from '../components/Greeting.jsx';
+import Lightbox from '../components/Lightbox.jsx';
+import MenuBar from '../components/MenuBar.jsx';
+import '../styles/main.scss';
 
 export default function Home() {
   return (
