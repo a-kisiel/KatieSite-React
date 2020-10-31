@@ -1,11 +1,15 @@
 #about-section {
-    height: 100vh;
+    height: 70vh;
+}
+
+.bio-wrapper {
+    float: right;
 }
 
 .artist-image {
     margin: auto;
-    margin-left: 5%;
-    margin-right: 2%;
+    margin-left: 10%;
+    margin-right: 15px;
     padding: 4px;
     max-width: 400px;
     max-height: 400px;
@@ -24,10 +28,9 @@
 }
 
 #artist-bio {
-    margin-left: 5%;
+    margin-top: 0;
+    margin-left: 10%;
     margin-right: 5%;
-    margin-top: 2%;
-    text-align: justify;
 }
 
 .clear {
