@@ -4,10 +4,24 @@
     display: flex;
     align-items: center;
     justify-items: center;
+    width: 85vw;
+    height: 85vh;
 }
 
 .img-lightbox {
     margin: auto;
-    max-height: 80%;
-    max-width: 80%;
+    outline: none;
+}
+.magnifique {
+    margin: auto;
+    border: none;
+}
+
+.magnifique img {
+    height: 80vh;
+    max-width: 80vw;
+}
+
+.img-descriptor {
+    text-align: center;
 }
