@@ -15,7 +15,7 @@ function getArtistImages() {
 export default function() {
     return (
         <div id='about-section'>
-            <h2 id='about'>About</h2>
+            <h2 id='about' className='section-header'>About</h2>
             <div className='clear'></div>
             <div className='bio-wrapper'>
                 <img src={getArtistImages()[0]} className='artist-image' alt=''></img>

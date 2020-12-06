@@ -1,15 +1,6 @@
-#about-section {
-    height: 70vh;
-}
-
-.bio-wrapper {
-    float: right;
-}
-
 .artist-image {
-    margin: auto;
-    margin-left: 10%;
-    margin-right: 15px;
+    margin-left: 1rem;
+    margin-right: 1rem;
     padding: 4px;
     max-width: 400px;
     max-height: 400px;
@@ -17,20 +8,26 @@
     float: left;
 }
 
-#about {
-    padding-left: 15px;
-    float: left;
+.section-header {
+    color: #B7B7A4;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
     opacity: .8;
-    font-size: 2.4em;
+    background-color: #151612;
+    font-size: 1.6em;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 2;
 }
 
 #artist-bio {
     margin-top: 0;
-    margin-left: 10%;
-    margin-right: 5%;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .clear {

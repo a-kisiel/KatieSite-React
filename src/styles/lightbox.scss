@@ -18,7 +18,12 @@
 }
 
 .magnifique img {
-    height: 80vh;
+    display: block;
+    width: auto;
+    height: auto;
+    min-height: 50vh;
+    min-width: 40vh;
+    max-height: 80vh;
     max-width: 80vw;
 }
 

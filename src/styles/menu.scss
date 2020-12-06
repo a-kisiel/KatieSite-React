@@ -13,7 +13,8 @@ $eerie: #151612;
 .menu-bar {
     display: inline-flex;
     flex-direction: row;
-    background-color: rgba($eerie, .8);
+    background-color: $eerie;
+    opacity: 0;
     border-radius: 0 0 0 5px;
     padding-left: 5px;
     padding-right: 5px;
@@ -38,7 +39,7 @@ a.menu-item:hover {
     position: sticky;
     top: 0;
     height: 0;
-    z-index: 2;
+    z-index: 3;
 }
 
 .clear {
