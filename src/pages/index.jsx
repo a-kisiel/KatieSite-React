@@ -8,9 +8,18 @@ import Lightbox from '../components/Lightbox.jsx';
 import MenuBar from '../components/MenuBar.jsx';
 import '../styles/main.scss';
 
+function getWallpaper() {
+  function importAll(r) {
+      return r.keys().map(r);
+  }
+  let wallpapers = importAll(require.context('../images/wallpapers/', false, /\.(jpe?g)$/));
+  let w = wallpapers[Math.floor(Math.random() * wallpapers.length)].default
+  return w;
+}
+
 export default function Home() {
   return (
-    <div id='top'>
+    <div id='top' style={{ backgroundImage: `url(${getWallpaper()})` }}>
       <Helmet>
         <meta charSet='utf-8' />
         <title>Katie Kisiel</title>
