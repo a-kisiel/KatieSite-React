@@ -19,16 +19,18 @@ function getWallpaper() {
 
 export default function Home() {
   return (
-    <div id='top' style={{ backgroundImage: `url(${getWallpaper()})` }}>
+    <div id='top' >
       <Helmet>
         <meta charSet='utf-8' />
         <title>Katie Kisiel</title>
         <link rel='canonical' href='/' />
       </Helmet>
-      <MenuBar />
-      <Greeting />
-      <Gallery />
-      <Lightbox />
+      <div id='bacc' style={{ backgroundImage: `url(${getWallpaper()})` }}>
+        <MenuBar />
+        <Greeting />
+        <Gallery />
+        <Lightbox />
+      </div>
       <About />
       <Footer />
     </div>
