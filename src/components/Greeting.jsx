@@ -16,7 +16,7 @@ function getWallpaper() {
 export default function () {
     return (
         <div id='greeting' style={{ backgroundImage: `url(${getWallpaper()})` }}>
-                <Rotate top left>
+                {/* <Rotate top left>
                     <Bounce top> 
                         <h1 id='say-hello'>Hello!</h1>
                         <div id='brief-bio'>
@@ -25,7 +25,7 @@ export default function () {
                             </Fade>
                         </div>
                     </Bounce>
-                </Rotate>
+                </Rotate> */}
         </div>
     )
 }

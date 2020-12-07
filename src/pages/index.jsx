@@ -25,12 +25,9 @@ export default function Home() {
         <title>Katie Kisiel</title>
         <link rel='canonical' href='/' />
       </Helmet>
-      <div id='bacc' style={{ backgroundImage: `url(${getWallpaper()})` }}>
-        <MenuBar />
-        <Greeting />
-        <Gallery />
-        <Lightbox />
-      </div>
+      <MenuBar />
+      <Greeting />
+      <Gallery />
       <About />
       <Footer />
     </div>

@@ -16,8 +16,8 @@ export default function Home() {
         <title>Katie Kisiel</title>
         <link rel='canonical' href='/' />
       </Helmet>
-      <MenuBar />
       <Greeting />
+      <MenuBar />
       <Gallery />
       <Lightbox />
       <About />

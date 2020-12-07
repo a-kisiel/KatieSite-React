@@ -10,17 +10,35 @@ $ebony: #6B705C;
 $black-olive: #404337;
 $eerie: #151612;
 
+
 .menu-bar {
+    width: 100%;
+    background-color: $eerie;
+    position: -webkit-sticky;
+    position: fixed;
+    opacity: .8;
+}
+
+.nav-menu {
     display: inline-flex;
     flex-direction: row;
     background-color: $eerie;
-    opacity: 0;
     border-radius: 0 0 0 5px;
+    margin-left: 80%;
     padding-left: 5px;
     padding-right: 5px;
-    margin-left: 80%;
-    align-items: center;
     float: right;
+    align-items: center;
+    position: fixed;
+    z-index: 4;
+}
+
+#signature img {
+    height: 60px;
+    width: auto;
+    border-radius: 0 0 5px 0;
+    background-color: $eerie;
+    float: left;
 }
 
 .menu-item {
@@ -37,9 +55,7 @@ a.menu-item:hover {
 .sticky {
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
-    height: 0;
-    z-index: 3;
+    height: auto;
 }
 
 .clear {

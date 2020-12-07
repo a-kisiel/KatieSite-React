@@ -10,12 +10,16 @@ $ebony: #6B705C;
 $eerie: #151612;
 
 #greeting {
+    margin: 0;
+    padding: 0;
     height: 100vh;
     width: 100%;
     background-size: cover;
+    position: fixed;
     display: flex;
     justify-content: left;
     align-items: center;
+    z-index: 0;
 }
 
 #say-hello {

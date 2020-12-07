@@ -2,16 +2,6 @@ import React from "react";
 import Lightbox from '../components/Lightbox.jsx';
 import '../styles/gallery.scss';
 
-function getWallpaper() {
-    function importAll(r) {
-        return r.keys().map(r);
-    }
-
-    let wallpapers = importAll(require.context('../images/wallpapers/', false, /\.(jpe?g)$/));
-    let w = wallpapers[Math.floor(Math.random() * wallpapers.length)].default
-    return w;
-}
-
 function createGallery() {
     function importAll(r) {
         return r.keys().map(r);
@@ -41,9 +31,9 @@ function shuffleImages(imgArr) {
 
 export default function () {
     return (
-        <div>
+        <div id='portfolio'>
             <h2 id='portfolio-header' className='section-header'>Portfolio</h2>
-            <div id='portfolio' className='gallery-wrapper'>
+            <div className='gallery-wrapper'>
                 {createGallery()}
             </div>
             <div className='clear'></div>

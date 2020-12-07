@@ -1,24 +1,15 @@
+#portfolio {
+    margin-top: 100vh;
+}
+
 .gallery-wrapper {
     margin-left: 15%;
     margin-right: 15%;
+    padding: 2% 3% 3% 3%;
     columns: 5 200px;
     column-gap: 1rem;
-}
-
-.section-header {
-    color: #B7B7A4;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 1rem;
-    margin-top: 0;
-    margin-bottom: 0;
-    opacity: .8;
-    background-color: #151612;
-    font-size: 1.6em;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 2;
+    position: relative;
+    background-color: rgba(15, 16, 12, .8);
 }
 
 .box {

@@ -11,8 +11,7 @@ $black-olive: #404337;
 $eerie: #151612;
 
 body {
-    margin-left: 0;
-    margin-top: 0;
+    margin: 0;
     font: 100% $primary-font;
     color: $champagne;
     background-color: $eerie;
@@ -22,6 +21,10 @@ body {
         text-align: center;
         text-decoration: underline;
     }
+}
+
+#top {
+    overflow-x: hidden;
 }
 
 .clear {
