@@ -1,6 +1,6 @@
-import React from 'react';
-import { Rotate, Bounce, Fade } from 'react-reveal';
-import '../styles/greeting.scss'
+import React, { useState } from 'react';
+import { IoIosArrowDropdownCircle } from 'react-icons/io';
+import '../styles/greeting.scss';
 
 function getWallpaper() {
     function importAll(r) {
@@ -8,24 +8,29 @@ function getWallpaper() {
     }
 
     let wallpapers = importAll(require.context('../images/wallpapers/', false, /\.(jpe?g)$/));
-    let w = wallpapers[Math.floor(Math.random() * wallpapers.length)].default
+    let w = {}
+    w.src = wallpapers[Math.floor(Math.random() * wallpapers.length)].default
+    w.name = w.src.split('.')[0].split('static/')[1].split('-')[0].split('/')[1].replaceAll('_', ' ')
     return w
-
 }
 
 export default function () {
+    const [state, setState] = useState(1);
+    window.onscroll =()=>{
+        const newScrollHeight = Math.ceil(window.scrollY / 50) *50;
+        if (this.state.currentScrollHeight != newScrollHeight){
+            this.setState({currentScrollHeight: newScrollHeight})
+        }
+      }
+    let wall = getWallpaper();
     return (
-        <div id='greeting' style={{ backgroundImage: `url(${getWallpaper()})` }}>
-                {/* <Rotate top left>
-                    <Bounce top> 
-                        <h1 id='say-hello'>Hello!</h1>
-                        <div id='brief-bio'>
-                            <Fade delay={1000}>
-                                <h3>I'm Katie, and I like art and chemistry!</h3>
-                            </Fade>
-                        </div>
-                    </Bounce>
-                </Rotate> */}
+        <div>
+            <div id='greeting' style={{ backgroundImage: `url(${wall.src})` }}>
+                <div className='greeting-title-wrapper'>
+                    <div className='greeting-title'>{wall.name}</div>
+                    <IoIosArrowDropdownCircle id='down-icon'></IoIosArrowDropdownCircle>
+                </div>
+            </div>
         </div>
     )
 }

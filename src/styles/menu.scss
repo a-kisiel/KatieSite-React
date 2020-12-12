@@ -14,29 +14,24 @@ $eerie: #151612;
 .menu-bar {
     width: 100%;
     background-color: $eerie;
-    position: -webkit-sticky;
-    position: fixed;
+    position: absolute;
     opacity: .8;
 }
 
 .nav-menu {
+    height: 60px;
     display: inline-flex;
     flex-direction: row;
     background-color: $eerie;
-    border-radius: 0 0 0 5px;
-    margin-left: 80%;
+    float: right;
     padding-left: 5px;
     padding-right: 5px;
-    float: right;
     align-items: center;
-    position: fixed;
-    z-index: 4;
 }
 
 #signature img {
     height: 60px;
     width: auto;
-    border-radius: 0 0 5px 0;
     background-color: $eerie;
     float: left;
 }

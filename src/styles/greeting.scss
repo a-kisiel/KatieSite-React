@@ -22,22 +22,20 @@ $eerie: #151612;
     z-index: 0;
 }
 
-#say-hello {
-    margin-left: 25px;
-    color: $champagne;
-    font-size: 4em;
-    margin-bottom: 0;
-}
-
-#brief-bio {
-    margin-left: 25px;
-    color: $champagne;
+.greeting-title-wrapper {
+    margin: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
-h3 {
-    font: 100% $primary-font;
-    font-size: 1.5em;
+.greeting-title {
+    font-size: 2em;
+    margin: auto;
+    margin-top: 85vh;
+}
+
+#down-icon {
+    font-size: 2.4em;
+    margin: auto;
+    margin-top: 10px;
 }

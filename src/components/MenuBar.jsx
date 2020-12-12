@@ -16,15 +16,13 @@ export default function() {
         <div menu-wrapper>
             <Fade>
                 <div className='menu-bar'>
+                    <AnchorLink id='signature' className='menu-item' href='#top'><img src={getSig()} /></AnchorLink>
                     <div className='nav-menu'>
                         <AnchorLink className='menu-item' href='#top'>Home</AnchorLink>
                         <p className='menu-item'> | </p>
                         <AnchorLink className='menu-item' href='#portfolio'>Portfolio</AnchorLink>
                         <p className='menu-item'> | </p>
                         <AnchorLink className='menu-item' href='#about'>About</AnchorLink>
-                    </div>
-                    <div id='signature'>
-                        <AnchorLink className='menu-item' href='#top'><img src={getSig()} /></AnchorLink>
                     </div>
                 </div>
             </Fade>
