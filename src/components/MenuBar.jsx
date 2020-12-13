@@ -11,7 +11,7 @@ function getSig() {
     return sign[0].default
 }
 
-export default function() {
+export default function MenuBar() {
     return (
         <div menu-wrapper>
             <Fade>

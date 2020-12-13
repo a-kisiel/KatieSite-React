@@ -15,6 +15,7 @@ $eerie: #151612;
     height: 100vh;
     width: 100%;
     background-size: cover;
+    background-position: 0% 30%;
     position: fixed;
     display: flex;
     justify-content: left;
@@ -32,10 +33,18 @@ $eerie: #151612;
     font-size: 2em;
     margin: auto;
     margin-top: 85vh;
+    mix-blend-mode: luminosity;
 }
 
 #down-icon {
     font-size: 2.4em;
     margin: auto;
     margin-top: 10px;
+}
+
+@media only screen and (max-width: 982px) {
+    #greeting {
+        background-size: cover;
+        object-position: 50% 50%;
+    }
 }

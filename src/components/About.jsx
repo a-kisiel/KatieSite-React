@@ -12,7 +12,7 @@ function getArtistImages() {
     return artistImages
 }
 
-export default function() {
+export default function About() {
     return (
         <div id='about-section'>
             <h2 id='about' className='section-header'>About</h2>

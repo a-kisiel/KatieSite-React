@@ -7,8 +7,7 @@ function createGallery() {
         return r.keys().map(r);
     }
     let artFiles = importAll(require.context('../images/gallery/', false, /\.(jpe?g)$/));
-    let wallpapers = importAll(require.context('../images/wallpapers/', false, /\.(jpe?g)$/));
-    const imageFiles = shuffleImages(artFiles.concat(wallpapers));
+    const imageFiles = shuffleImages(artFiles);
     const images = [];
     for (let image of imageFiles) {
         let name = image.default.split('.')[0].split('static/')[1].split('-')[0].split('/')[1].replaceAll('_', ' ')
@@ -28,7 +27,7 @@ function shuffleImages(imgArr) {
     return imgArr
 }
 
-export default function () {
+export default function Gallery() {
     return (
         <div id='portfolio'>
             <h2 id='portfolio-header' className='section-header'>Portfolio</h2>

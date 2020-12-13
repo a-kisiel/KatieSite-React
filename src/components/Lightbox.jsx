@@ -4,7 +4,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Magnifier from 'react-magnifier';
 import '../styles/lightbox.scss';
 
-export default function TransitionsModal(props) {
+export default function Lightbox(props) {
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
