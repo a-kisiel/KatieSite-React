@@ -3,6 +3,10 @@
     z-index: 1;
 }
 
+#about {
+    margin: auto;
+}
+
 .artist-image {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -30,7 +34,6 @@
 
 .bio-wrapper {
     background-color: #151612;
-    margin: 0 15% auto 15%;
     padding: 1% 2% 5% 1%;
     -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
     from(rgba(0,0,0,.8)), to(rgba(0,0,0,1)));
@@ -42,14 +45,4 @@
 
 .clear {
     clear: both;
-}
-
-@media only screen and (max-width: 982px) {
-    .bio-wrapper {
-        margin: 0 2% auto 2%;
-    }
-
-    .section-header {
-        margin: 0 2% auto 2%;
-    }
 }

@@ -16,7 +16,7 @@ export default function() {
         <div menu-wrapper>
             <Fade>
                 <div className='menu-bar'>
-                    <AnchorLink id='signature' className='menu-item' href='#top'><img src={getSig()} /></AnchorLink>
+                    <div id='signature' className='menu-item' href='#top'><img src={getSig()} alt='Katie Kisiel' /></div>
                     <div className='nav-menu'>
                         <AnchorLink className='menu-item' href='#top'>Home</AnchorLink>
                         <p className='menu-item'> | </p>

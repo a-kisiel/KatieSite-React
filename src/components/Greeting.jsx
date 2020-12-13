@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Fade } from 'react-reveal';
 import { IoIosArrowDropdownCircle } from 'react-icons/io';
 import '../styles/greeting.scss';
 
@@ -30,7 +31,7 @@ export default function () {
             <div id='greeting' style={{ backgroundImage: `url(${wall.src})`, opacity: (opacity + .2)}}>
                 <div className='greeting-title-wrapper' style={{ opacity: opacity }}>
                     <div className='greeting-title'>{wall.name}</div>
-                    <IoIosArrowDropdownCircle id='down-icon'></IoIosArrowDropdownCircle>
+                    <IoIosArrowDropdownCircle id='down-icon' />
                 </div>
             </div>
         </div>
