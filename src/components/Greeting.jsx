@@ -14,19 +14,21 @@ function getWallpaper() {
     return w
 }
 
+var wall = getWallpaper();
+
 export default function () {
-    const [state, setState] = useState(1);
-    window.onscroll =()=>{
-        const newScrollHeight = Math.ceil(window.scrollY / 50) *50;
-        if (this.state.currentScrollHeight != newScrollHeight){
-            this.setState({currentScrollHeight: newScrollHeight})
-        }
-      }
-    let wall = getWallpaper();
+    const [opacity, setOpacity] = useState(1);
+    window.onscroll = () => {
+        let yo = window.pageYOffset;
+        let vh = window.innerHeight;
+        if (yo > vh) return;
+        setOpacity((vh - yo) / vh);
+    }
+    
     return (
         <div>
-            <div id='greeting' style={{ backgroundImage: `url(${wall.src})` }}>
-                <div className='greeting-title-wrapper'>
+            <div id='greeting' style={{ backgroundImage: `url(${wall.src})`, opacity: (opacity + .2)}}>
+                <div className='greeting-title-wrapper' style={{ opacity: opacity }}>
                     <div className='greeting-title'>{wall.name}</div>
                     <IoIosArrowDropdownCircle id='down-icon'></IoIosArrowDropdownCircle>
                 </div>

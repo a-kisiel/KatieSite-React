@@ -35,3 +35,12 @@
 .clear {
     clear: both;
 }
+
+@media only screen and (max-width: 982px) {
+    .gallery-wrapper {
+        height: auto;
+        max-height: 100vh;
+        overflow-x: scroll;
+        margin: 0 2% auto 2%;
+    }
+}

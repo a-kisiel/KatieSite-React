@@ -43,3 +43,13 @@
 .clear {
     clear: both;
 }
+
+@media only screen and (max-width: 982px) {
+    .bio-wrapper {
+        margin: 0 2% auto 2%;
+    }
+
+    .section-header {
+        margin: 0 2% auto 2%;
+    }
+}
