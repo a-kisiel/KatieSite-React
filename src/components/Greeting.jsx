@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Fade } from 'react-reveal';
 import { IoIosArrowDropdownCircle } from 'react-icons/io';
+import MenuBar from '../components/MenuBar';
 import '../styles/greeting.scss';
 
 function getWallpaper() {
@@ -31,6 +31,7 @@ export default function Greeting () {
     
     return (
         <div>
+            <MenuBar name={wall.name}/>
             <div id='greeting' style={{ backgroundImage: `url(${wall.src})`, opacity: (opacity + .2)}}>
                 <div className='greeting-title-wrapper' style={{ opacity: opacity }}>
                     <div className='greeting-title'>{wall.name}</div>

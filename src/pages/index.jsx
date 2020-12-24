@@ -7,19 +7,23 @@ import Greeting from '../components/Greeting.jsx';
 import MenuBar from '../components/MenuBar.jsx';
 import '../styles/main.scss';
 
-export default function Home() {
-  return (
+class Index extends React.Component {
+  
+  render () {
+    return (
     <div id='top' >
-      <Helmet>
-        <meta charSet='utf-8' />
-        <title>Katie Kisiel</title>
-        <link rel='canonical' href='/' />
-      </Helmet>
-      <MenuBar />
-      <Greeting />
-      <Gallery />
-      <About />
-      <Footer />
-    </div>
-  )
+        <Helmet>
+          <meta charSet='utf-8' />
+          <title>Katie Kisiel</title>
+          <link rel='canonical' href='/' />
+        </Helmet>
+        <Greeting />
+        <Gallery />
+        <About />
+        <Footer title='adflk'></Footer>
+      </div>
+    )
+  }
 }
+
+export default Index;
