@@ -47,10 +47,19 @@ a.menu-item:hover {
     color: $sand;
 }
 
-.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    height: auto;
+#hamburger-icon {
+    color: $champagne;
+    font-size: 1.2em;
+}
+
+#accordion-button {
+    background-color: $eerie;
+    padding: 0;
+    padding-right: 15px;
+}
+
+#accordion-details {
+    background-color: $eerie;
 }
 
 .clear {

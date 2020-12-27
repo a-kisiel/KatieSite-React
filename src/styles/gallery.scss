@@ -45,7 +45,9 @@
     .gallery-wrapper {
         height: auto;
         max-height: 100vh;
+        columns: 5 100px;
+        column-gap: 1rem;
+        margin: 0 0 auto 2%;
         overflow-x: scroll;
-        margin: 0 2% auto 2%;
     }
 }
