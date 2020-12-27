@@ -25,6 +25,7 @@ $eerie: #151612;
 
 .greeting-title-wrapper {
     margin: auto;
+    margin-top: 85vh;
     display: flex;
     flex-direction: column;
 }
@@ -32,8 +33,7 @@ $eerie: #151612;
 .greeting-title {
     font-size: 2em;
     margin: auto;
-    margin-top: 85vh;
-    color: whitesmoke;
+    color: $champagne;
 }
 
 #down-icon {
