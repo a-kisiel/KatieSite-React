@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { IoIosArrowDropdownCircle } from 'react-icons/io';
 import MenuBar from '../components/MenuBar';
+import Bobbing from '../components/Bobbing';
 import '../styles/greeting.scss';
 
 function getWallpaper() {
@@ -22,12 +22,18 @@ var wall = getWallpaper();
 
 export default function Greeting () {
     const [opacity, setOpacity] = useState(1);
+    const [show, toggleComponent] = useState(false);
+
     window.onscroll = () => {
         let yo = window.pageYOffset;
         let vh = window.innerHeight;
         if (yo > vh) return;
         setOpacity((vh - yo) / vh);
     }
+
+    setTimeout(() => {
+        toggleComponent(!show);
+    }, 1200);
     
     return (
         <div>
@@ -35,7 +41,7 @@ export default function Greeting () {
             <div id='greeting' style={{ backgroundImage: `url(${wall.src})`, opacity: (opacity + .2)}}>
                 <div className='greeting-title-wrapper' style={{ opacity: opacity }}>
                     <div className='greeting-title'>{wall.name}</div>
-                    <IoIosArrowDropdownCircle id='down-icon' />
+                    <Bobbing show={show}/>
                 </div>
             </div>
         </div>
