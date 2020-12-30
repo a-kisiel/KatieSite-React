@@ -8,13 +8,11 @@ function getWallpaper() {
         return r.keys().map(r);
     }
 
-    let wallpapers = importAll(require.context('../images/gallery/', false, /\.(jpe?g)$/));
+    let wallpapers = importAll(require.context('../images/wallpapers/', false, /\.(jpe?g)$/));
     let w = {}
-    do {
-        w.src = wallpapers[Math.floor(Math.random() * wallpapers.length)].default
-        w.name = w.src.split('.')[0].split('static/')[1].split('-')[0].split('/')[1]
-    } while (w.name[0] != 'W')
-    w.name = w.name.split('__')[1].replaceAll('_', ' ')
+    w.src = wallpapers[Math.floor(Math.random() * wallpapers.length)].default
+    w.name = w.src.split('.')[0].split('static/')[1].split('-')[0].split('/')[1]
+    w.name = w.name.replaceAll('_', ' ')
     return w
 }
 

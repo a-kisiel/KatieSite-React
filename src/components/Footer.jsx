@@ -1,5 +1,4 @@
 import React from 'react';
-import { SiInstagram } from 'react-icons';
 
 export default function Footer(props) {
     return (
