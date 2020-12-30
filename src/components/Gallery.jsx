@@ -10,8 +10,10 @@ function createGallery() {
     const imageFiles = shuffleImages(artFiles);
     const images = [];
     for (let image of imageFiles) {
-        let name = image.default.split('.')[0].split('static/')[1].split('-')[0].split('/')[1].replaceAll('_', ' ')
-        images.push(<div className='box'><Lightbox source={image.default} name={name} /></div>)
+        let name = image.default.split('.')[0].split('static/')[1].split('-')[0].split('/')[1]
+        let medium = name.split('=')[1].replaceAll('_', ' ');
+        name = name.split('=')[0].replaceAll('_', ' ')
+        images.push(<div className='box'><Lightbox source={image.default} name={name} medium={medium}/></div>)
     }
     return images
 }

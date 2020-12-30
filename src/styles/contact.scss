@@ -25,6 +25,14 @@
     z-index: 4;
 }
 
-@media only screen and (max-width: 4000px) {
+@media only screen and (max-width: 650px) {
+    #contacts-holder {
+        flex-direction: column;
+        margin-left: 10%;
+    }
 
+    .contact-element {
+        margin: 0;
+        margin-right: auto;
+    }
 }

@@ -27,11 +27,22 @@
     max-width: 80vw;
 }
 
-.img-descriptor {
-    text-align: center;
+.img-description {
+    display: flex;
+    flex-direction: column;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.title {
+    margin: auto;
     color: #FFE8D6;
+}
+
+.medium {
+    margin: auto;
+    margin-top: 4px;
+    color: white;
 }
