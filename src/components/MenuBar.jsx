@@ -27,7 +27,7 @@ export default function MenuBar(props) {
                 <p className='menu-item'> | </p> */}
                 <AnchorLink className='menu-item' href='#portfolio'>Portfolio</AnchorLink>
                 <p className='menu-item'> | </p>
-                <AnchorLink className='menu-item' href='#about'>About</AnchorLink>
+                <AnchorLink className='menu-item' href='#contact'>Contact</AnchorLink>
             </div>
     </div>
     if (width < 620) {
@@ -41,7 +41,7 @@ export default function MenuBar(props) {
                     <div className='nav-menu' style={{margin: 'auto'}}>
                         <AnchorLink className='menu-item' href='#portfolio'>Portfolio</AnchorLink>
                         <p className='menu-item'> | </p>
-                        <AnchorLink className='menu-item' href='#about'>About</AnchorLink>
+                        <AnchorLink className='menu-item' href='#contact'>Contact</AnchorLink>
                     </div>
                 </AccordionDetails>
             </Accordion>

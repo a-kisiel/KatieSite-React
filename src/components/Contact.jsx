@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/about.scss';
+import '../styles/contact.scss';
 
 function getArtistImages() {
     function importAll(r) {
@@ -12,10 +12,10 @@ function getArtistImages() {
     return artistImages
 }
 
-export default function About() {
+export default function Contact() {
     return (
-        <div id='about-section'>
-            <h2 id='about' className='section-header'>About</h2>
+        <div id='contact-section'>
+            <h2 id='contact' className='section-header'>Contact</h2>
             <div className='clear'></div>
             <div className='bio-wrapper'>
                 <img id='artist1' src={getArtistImages()[0]} className='artist-image' alt=''></img>

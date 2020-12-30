@@ -33,7 +33,7 @@ export default function Greeting () {
 
     setTimeout(() => {
         toggleComponent(!show);
-    }, 1200);
+    }, 1800);
     
     return (
         <div>

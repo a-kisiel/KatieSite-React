@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import About from './components/About.jsx';
+import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import Gallery from './components/Gallery.jsx'
 import Greeting from './components/Greeting.jsx';
@@ -20,7 +20,7 @@ export default function Home() {
       <MenuBar />
       <Gallery />
       <Lightbox />
-      <About />
+      {/* <Contact /> */}
       <Footer />
     </div>
   )
