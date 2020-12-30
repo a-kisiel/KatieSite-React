@@ -19,12 +19,12 @@ export default function Contact() {
         <div id='contact'>
             <div id='contacts-holder'>
                 <div className='contact-element'>
-                    <SiInstagram />
-                    <p> : kmkisiel </p>
+                    <SiInstagram className='contact-icon'/>
+                    <a href='https://www.instagram.com/kmkisiel/' target='_blank' className='external-link'>kmkisiel </a>
                 </div>
                 <div className='contact-element'>
-                    <FiMail />
-                    <p> : kmkisiel@alfred.edu</p>
+                    <FiMail className='contact-icon'/>
+                    <p>kmk15@alfred.edu</p>
                 </div>
             </div>
         </div>

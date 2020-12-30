@@ -12,6 +12,17 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    z-index: 4;
+}
+
+.contact-icon {
+    padding-right: 10px;
+}
+
+.external-link {
+    color: #FFE8D6;
+    text-decoration: none;
+    z-index: 4;
 }
 
 @media only screen and (max-width: 4000px) {
