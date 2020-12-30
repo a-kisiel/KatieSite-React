@@ -1,0 +1,51 @@
+#contact-section {
+    position: relative;
+    z-index: 1;
+}
+
+#contact {
+    margin: auto;
+}
+
+.artist-image {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 4px;
+    max-width: 400px;
+    max-height: 400px;
+    border-radius: 10px;
+    float: left;
+}
+
+.section-header {
+    color: #B7B7A4;
+    background-color: #151612;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 1rem;
+    margin: 0 15% 0 15%;
+    opacity: .8;
+    font-size: 1.6em;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.bio-wrapper {
+    display: flex;
+    background-color: #151612;
+    padding: 1% 2% 5% 1%;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
+    from(rgba(0,0,0,.8)), to(rgba(0,0,0,1)));
+}
+
+#artist1 {
+    opacity: initial;
+    max-width: 25%;
+    height: auto;
+}
+
+.clear {
+    clear: both;
+}

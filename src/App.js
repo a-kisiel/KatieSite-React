@@ -20,7 +20,7 @@ export default function Home() {
       <MenuBar />
       <Gallery />
       <Lightbox />
-      {/* <Contact /> */}
+      <Contact />
       <Footer />
     </div>
   )

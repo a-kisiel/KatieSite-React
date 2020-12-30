@@ -1,7 +1,5 @@
 import React from 'react';
 import '../styles/contact.scss';
-import { SiInstagram } from 'react-icons/si';
-import { FiMail } from 'react-icons/fi';
 
 function getArtistImages() {
     function importAll(r) {
@@ -16,17 +14,16 @@ function getArtistImages() {
 
 export default function Contact() {
     return (
-        <div id='contact'>
-            <div id='contacts-holder'>
-                <div className='contact-element'>
-                    <SiInstagram />
-                    <p> : kmkisiel </p>
-                </div>
-                <div className='contact-element'>
-                    <FiMail />
-                    <p> : kmkisiel@alfred.edu</p>
-                </div>
+        <div id='contact-section'>
+            <h2 id='contact' className='section-header'>Contact</h2>
+            <div className='clear'></div>
+            <div className='bio-wrapper'>
+                <img id='artist1' src={getArtistImages()[0]} className='artist-image' alt=''></img>
+                <p id='artist-bio'>
+                    Hello.
+                </p>
             </div>
+            <div className='clear'></div>
         </div>
     )
 }
