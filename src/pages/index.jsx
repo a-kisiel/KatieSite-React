@@ -4,7 +4,6 @@ import Contact from '../components/Contact.jsx';
 import Footer from '../components/Footer.jsx';
 import Gallery from '../components/Gallery.jsx'
 import Greeting from '../components/Greeting.jsx';
-import MenuBar from '../components/MenuBar.jsx';
 import '../styles/main.scss';
 
 class Index extends React.Component {
@@ -20,7 +19,7 @@ class Index extends React.Component {
         <Greeting />
         <Gallery />
         <Contact />
-        <Footer title='adflk'></Footer>
+        <Footer />
       </div>
     )
   }

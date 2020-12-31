@@ -34,8 +34,9 @@ export default function Lightbox(props) {
               <div className="img-lightbox">
                 <Magnifier src={props.source} className="magnifique" mgShape="square" mgShowOverflow={false} alt="" />
                 <div className='img-description'>
-                  <h2 className="title">{props.name}</h2>
-                  <h3 className='medium'>{props.medium}</h3>
+                  <h2 className="img-title">{props.name}</h2>
+                  <h2 className='img-medium'>{props.medium}</h2>
+                  <h2 className='img-date'>{props.date}</h2>
                 </div>
               </div>
             </Modal>
