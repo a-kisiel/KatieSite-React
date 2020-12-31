@@ -18,7 +18,6 @@ export default function MenuBar(props) {
     window.onresize = () => {
         setWidth(window.innerWidth)
     }
-    var isOpen = false;
     let menuComponent = 
     <div className='menu-bar'>
         <div id='signature' className='menu-item' href='#top'><img src={getSig()} alt='Katie Kisiel' /></div>
