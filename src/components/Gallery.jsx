@@ -73,9 +73,21 @@ export default function Gallery() {
                     id='selector'
                     isMulti
                     placeholder='All Media'
-
                     onChange={selectOptions}
                     options={mediaSelections}
+                    theme={(theme) => ({
+                        ...theme,
+                        borderRadius: '5px',
+                        colors: {
+                            ...theme.colors,
+                            primary25: '#6B705C',
+                            danger: '#CB997E',
+                            dangerLight: '#F44',
+                            neutral0: '#151612',
+                            neutral10: '#CB997E',
+                            neutral80: '#151612'
+                        }
+                    })}
                 />
             </div>
 
