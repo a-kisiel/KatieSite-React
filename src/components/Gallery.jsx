@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Lightbox from '../components/Lightbox.jsx';
 import Select from 'react-select';
 import '../styles/gallery.scss';
@@ -6,7 +6,8 @@ import '../styles/gallery.scss';
 var media = [];
 var mediaSelections = [];
 
-function createGallery(filterOut) {
+function createGallery(filter) {
+    media = []; mediaSelections = [];
     function importAll(r) {
         return r.keys().map(r);
     }
@@ -21,7 +22,7 @@ function createGallery(filterOut) {
         if (!media.includes(imgObj.medium)) {
             media.push(imgObj.medium);
         }
-        if (filterOut && filterOut.includes(imgObj.medium)) {
+        if (filter.length > 0 && !filter.includes(imgObj.medium)) {
             continue;
         }
         imgObj.date = name.split('=')[2].replaceAll('$', '/');
@@ -55,7 +56,15 @@ function shuffleImages(imgArr) {
 }
 
 export default function Gallery() {
-    let gallery = createGallery();
+    const [selectedOptions, selectOptions] = useState(null);
+    let selectedMedia = [];
+    if (selectedOptions) {
+        for (let so of selectedOptions) {
+            if (!so) continue;
+            selectedMedia.push(so.value)
+        }
+    }
+    let gallery = createGallery(selectedMedia);
     return (
         <div id='portfolio'>
             <div id='portfolio-header'>
@@ -63,7 +72,9 @@ export default function Gallery() {
                 <Select
                     id='selector'
                     isMulti
-                    defaultValue={'All'}
+                    placeholder='All Media'
+
+                    onChange={selectOptions}
                     options={mediaSelections}
                 />
             </div>

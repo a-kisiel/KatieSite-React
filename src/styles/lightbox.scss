@@ -27,6 +27,16 @@
     max-width: 80vw;
 }
 
+.zoomable {
+    display: block;
+    width: auto;
+    height: auto;
+    min-height: 50vh;
+    min-width: 40vh;
+    max-height: 80vh;
+    max-width: 80vw;
+}
+
 .img-description {
     display: flex;
     flex-direction: column;
