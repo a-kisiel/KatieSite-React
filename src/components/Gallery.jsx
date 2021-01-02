@@ -7,34 +7,45 @@ var media = [];
 var mediaSelections = [];
 
 function createGallery(filter) {
+    // Clear media lists (otherwise it duplicates everything each time it renders)
     media = []; mediaSelections = [];
+
+    // Helper for importing images
     function importAll(r) {
         return r.keys().map(r);
     }
+
     let artFiles = importAll(require.context('../images/gallery/', false, /\.(jpe?g)$/));
     const imageObjects = [];
     const images = [];
+
     for (let image of artFiles) {
         let imgObj = {};
+        // Start parsing out metadata from the img filename
         imgObj.src = image.default;
         let name = image.default.split('.')[0].split('static/')[1].split('-')[0].split('/')[1];
         imgObj.medium = name.split('=')[1].replaceAll('_', ' ');
+        // Gets all the available media
         if (!media.includes(imgObj.medium)) {
             media.push(imgObj.medium);
         }
+        // If a filter is being applied, only renders the appropriate elements
         if (filter.length > 0 && !filter.includes(imgObj.medium)) {
             continue;
         }
+        // Parses the metadata from 'name' accordingly
         imgObj.date = name.split('=')[2].replaceAll('$', '/');
         imgObj.year = imgObj.date.split('/')[2];
         imgObj.title = name.split('=')[0].replaceAll('_', ' ');
         imageObjects.push(imgObj)
     }
 
+    // Creates elements usable by Select from media
     for (let m of media) {
         mediaSelections.push({ value: m, label: m })
     }
 
+    // Shuffles the order of the images displayed
     const imageFiles = shuffleImages(imageObjects);
     // const imageFiles = imageObjects.sort((a,b) => (a.year > b.year) ? 1 : ((b.year > a.year) ? -1 : 0));
 
@@ -84,8 +95,8 @@ export default function Gallery() {
                             danger: '#CB997E',
                             dangerLight: '#F44',
                             neutral0: '#151612',
-                            neutral10: '#CB997E',
-                            neutral80: '#151612'
+                            neutral10: '#6B705C',
+                            neutral80: '#FFE8D6'
                         }
                     })}
                 />

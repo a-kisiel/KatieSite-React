@@ -5,17 +5,6 @@ import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 import Magnifier from 'react-magnifier';
 import '../styles/lightbox.scss';
 
-function isTouchDevice() {  
-  try {  
-    document.createEvent("TouchEvent");  
-    return true;  
-  } catch (e) {  
-    return false;  
-  }  
-}
-
-console.log((isTouchDevice())? 'is touch device' : 'is not touch device');
-
 export default function Lightbox(props) {
   const [open, setOpen] = React.useState(false);
 

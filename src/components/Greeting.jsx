@@ -22,10 +22,15 @@ export default function Greeting () {
     const [opacity, setOpacity] = useState(1);
     const [show, toggleComponent] = useState(false);
 
+    
     window.onscroll = () => {
         let yo = window.pageYOffset;
         let vh = window.innerHeight;
-        if (yo > vh) return;
+        if (yo > vh) {
+            setOpacity(0);
+            return;
+        }
+        console.log(yo)
         setOpacity((vh - yo) / vh);
     }
 
