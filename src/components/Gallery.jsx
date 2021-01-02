@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Lightbox from '../components/Lightbox.jsx';
 import Select from 'react-select';
+import { BsArrowUpShort } from 'react-icons/bs';
 import '../styles/gallery.scss';
 
 var media = [];
@@ -68,6 +69,7 @@ function shuffleImages(imgArr) {
 
 export default function Gallery() {
     const [selectedOptions, selectOptions] = useState(null);
+
     let selectedMedia = [];
     if (selectedOptions) {
         for (let so of selectedOptions) {
@@ -101,10 +103,10 @@ export default function Gallery() {
                     })}
                 />
             </div>
-
             <div className='gallery-wrapper'>
                 {gallery}
             </div>
+            
             <div className='clear'></div>
         </div>
     )

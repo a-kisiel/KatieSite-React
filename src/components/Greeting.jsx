@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { BsArrowUpShort } from 'react-icons/bs';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import MenuBar from '../components/MenuBar';
 import Bobbing from '../components/Bobbing';
 import '../styles/greeting.scss';
@@ -22,7 +24,6 @@ export default function Greeting () {
     const [opacity, setOpacity] = useState(1);
     const [show, toggleComponent] = useState(false);
 
-    
     window.onscroll = () => {
         let yo = window.pageYOffset;
         let vh = window.innerHeight;
@@ -30,13 +31,14 @@ export default function Greeting () {
             setOpacity(0);
             return;
         }
-        console.log(yo)
         setOpacity((vh - yo) / vh);
     }
 
     setTimeout(() => {
         toggleComponent(!show);
     }, 1800);
+
+    let topacity = Math.abs(1-opacity);
     
     return (
         <div>
@@ -47,6 +49,7 @@ export default function Greeting () {
                     <Bobbing show={show}/>
                 </div>
             </div>
+            <AnchorLink id='top-button' href='#top'><BsArrowUpShort id='toTheTop' style={{ opacity: topacity }} /></AnchorLink>
         </div>
     )
 }
