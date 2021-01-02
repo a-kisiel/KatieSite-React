@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Lightbox from '../components/Lightbox.jsx';
 import Select from 'react-select';
-import { BsArrowUpShort } from 'react-icons/bs';
 import '../styles/gallery.scss';
 
 var media = [];

@@ -14,7 +14,9 @@ $eerie: #151612;
     display: flex;
     margin-left: 15%;
     margin-right: 15%;
-    background-color: rgba(15, 16, 12, 1);
+    background-color: $eerie;
+    position: relative;
+    z-index: 4;
 }
 
 #section-header {
@@ -32,7 +34,7 @@ $eerie: #151612;
     width: 50%;
     max-width: 50%;
     margin: auto;
-    margin-right: 0;
+    margin-right: 10px;
     z-index: 6;
 }
 
