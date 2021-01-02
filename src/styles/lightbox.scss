@@ -20,20 +20,6 @@ $eerie: #151612;
     margin: auto;
     outline: none;
 }
-.magnifique {
-    margin: auto;
-    border: none;
-}
-
-.magnifique img {
-    display: block;
-    width: auto;
-    height: auto;
-    min-height: 50vh;
-    min-width: 40vh;
-    max-height: 80vh;
-    max-width: 80vw;
-}
 
 .zoomable {
     display: block;
@@ -73,4 +59,15 @@ $eerie: #151612;
     margin-right: auto;
     color: white;
     font-size: .8rem;
+}
+
+@media only screen and (orientation:portrait)  {
+
+    .lightbox {
+        height: auto;
+    }
+
+    .zoomable {
+        min-height: 0vh;
+    }
 }
