@@ -12,8 +12,8 @@ $eerie: #151612;
     display: flex;
     align-items: center;
     justify-items: center;
-    width: 85vw;
-    height: 85vh;
+    width: 85%;
+    height: 85%;
 }
 
 .img-lightbox {
@@ -25,10 +25,10 @@ $eerie: #151612;
     display: block;
     width: auto;
     height: auto;
-    min-height: 50vh;
-    min-width: 40vh;
-    max-height: 80vh;
-    max-width: 80vw;
+    min-height: 50%;
+    min-width: 40%;
+    max-height: 80%;
+    max-width: 80%;
 }
 
 .img-description {
@@ -68,6 +68,6 @@ $eerie: #151612;
     }
 
     .zoomable {
-        min-height: 0vh;
+        min-height: 0%;
     }
 }
