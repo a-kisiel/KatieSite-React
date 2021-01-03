@@ -1,10 +1,27 @@
 import React, { useState } from "react";
 import Lightbox from '../components/Lightbox.jsx';
 import Select from 'react-select';
+import axios from 'axios';
+import credentials from '../credentials.js';
 import '../styles/gallery.scss';
 
 var media = [];
 var mediaSelections = [];
+
+function importImages() {
+    axios.get('https://' + credentials.cloudinary_key + ':' + credentials.cloudinary_secret + '@api.cloudinary.com/v1_1/akisiel/resources/')
+        .then(imgs => {
+            console.log(imgs)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    let options = {
+        max_results: 200,
+        context: true,
+        metadata: true
+    }
+}
 
 function createGallery(filter) {
     // Clear media lists (otherwise it duplicates everything each time it renders)
@@ -68,6 +85,8 @@ function shuffleImages(imgArr) {
 
 export default function Gallery() {
     const [selectedOptions, selectOptions] = useState(null);
+
+    importImages();
 
     let selectedMedia = [];
     if (selectedOptions) {
