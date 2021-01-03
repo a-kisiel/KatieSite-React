@@ -69,5 +69,7 @@ $eerie: #151612;
 
     .zoomable {
         min-height: 0vh;
+        max-height: 60vh;
+        max-width: 75vw;
     }
 }
