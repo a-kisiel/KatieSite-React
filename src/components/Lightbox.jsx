@@ -39,7 +39,7 @@ export default function Lightbox(props) {
                 //   :
                   <TransformWrapper doubleClick={{mode: 'reset'}}>
                     <TransformComponent>
-                      <img src={props.source} className='zoomable' alt=""/>
+                      <img id='limg' src={props.source} className='zoomable' alt=""/>
                     </TransformComponent>
                   </TransformWrapper>
               }

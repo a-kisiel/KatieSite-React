@@ -22,6 +22,7 @@ var wall = getWallpaper();
 
 export default function Greeting () {
     const [opacity, setOpacity] = useState(1);
+    const [desOpacity, setDesOpacity] = useState(1);
     const [show, toggleComponent] = useState(false);
 
     window.onscroll = () => {
@@ -32,6 +33,7 @@ export default function Greeting () {
             return;
         }
         setOpacity((vh - yo) / vh);
+        setDesOpacity((vh - yo) / (yo * 40));
     }
 
     setTimeout(() => {
@@ -44,7 +46,7 @@ export default function Greeting () {
         <div>
             <MenuBar name={wall.name}/>
             <div id='greeting' style={{ backgroundImage: `url(${wall.src})`, opacity: (opacity + .2)}}>
-                <div className='greeting-title-wrapper' style={{ opacity: opacity }}>
+                <div className='greeting-title-wrapper' style={{ opacity: desOpacity }}>
                     <div className='greeting-title'>{wall.name}</div>
                     <Bobbing show={show}/>
                 </div>
