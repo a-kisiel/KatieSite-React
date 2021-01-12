@@ -86,7 +86,7 @@ function shuffleImages(imgArr) {
 export default function Gallery() {
     const [selectedOptions, selectOptions] = useState(null);
 
-    importImages();
+    // importImages();
 
     let selectedMedia = [];
     if (selectedOptions) {
