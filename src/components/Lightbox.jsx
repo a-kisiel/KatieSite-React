@@ -2,7 +2,6 @@ import React from 'react';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
-import Magnifier from 'react-magnifier';
 import '../styles/lightbox.scss';
 
 export default function Lightbox(props) {
@@ -33,16 +32,11 @@ export default function Lightbox(props) {
               }}
           >
             <div className="img-lightbox">
-              {
-                // (false) ?
-                //   <Magnifier src={props.source} className="magnifique" mgShape="square" mgShowOverflow={false} alt="" />
-                //   :
-                  <TransformWrapper doubleClick={{mode: 'reset'}}>
-                    <TransformComponent>
-                      <img id='limg' src={props.source} className='zoomable' alt=""/>
-                    </TransformComponent>
-                  </TransformWrapper>
-              }
+              <TransformWrapper doubleClick={{mode: 'reset'}}>
+                <TransformComponent>
+                  <img src={props.source} className='zoomable' alt=""/>
+                </TransformComponent>
+              </TransformWrapper>
               <div className='img-description'>
                 <h2 className="img-title">{props.name}</h2>
                 <h2 className='img-medium'>{props.medium}</h2>
