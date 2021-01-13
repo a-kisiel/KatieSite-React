@@ -4,4 +4,4 @@ I originally wrote this site as a Gatsby project, but found that I wanted a coup
 
 It's currently being hosted at katiekisiel.com.
 
-NOTE: Last build was 1/2/21
+NOTE: Last build was 1/11/21
