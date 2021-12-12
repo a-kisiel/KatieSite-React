@@ -1,0 +1,22 @@
+.login-header {
+    font-size: 24px;
+}
+
+.login-form-wrap {
+    display: flex; flex-direction: column;
+    max-width: 400px;
+    margin-top: 60px;
+}
+
+input {
+    font-size: 14px;
+    width: 280px; height: 26px;
+    margin-bottom: 8px;
+    padding: 4px;
+}
+
+button {
+    height: 36px;
+    margin-top: 10px;
+    padding: 6px 24px
+}
