@@ -3,7 +3,7 @@ import { BsArrowUpShort } from 'react-icons/bs';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import MenuBar from '../components/MenuBar';
 import Bobbing from '../components/Bobbing';
-import '../styles/greeting.scss';
+import '../styles/greeting.css';
 
 function getWallpaper() {
     function importAll(r) {

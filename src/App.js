@@ -6,7 +6,7 @@ import Gallery from './components/Gallery.jsx';
 import Greeting from './components/Greeting.jsx';
 import Lightbox from './components/Lightbox.jsx';
 import MenuBar from './components/MenuBar.jsx';
-import './styles/main.scss';
+import './styles/main.css';
 
 export default function Home() {
   return (

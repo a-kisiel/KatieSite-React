@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/contact.scss';
+import '../styles/contact.css';
 
 function getArtistImages() {
     function importAll(r) {

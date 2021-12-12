@@ -3,7 +3,7 @@ import { Fade } from 'react-reveal';
 import {Accordion, AccordionDetails, AccordionSummary } from '@material-ui/core';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { FaBars } from 'react-icons/fa';
-import '../styles/menu.scss';
+import '../styles/menu.css';
 
 function getSig() {
     function importAll(r) {

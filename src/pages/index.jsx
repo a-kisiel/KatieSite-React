@@ -4,7 +4,7 @@ import Contact from '../components/Contact.jsx';
 import Footer from '../components/Footer.jsx';
 import Gallery from '../components/Gallery.jsx'
 import Greeting from '../components/Greeting.jsx';
-import '../styles/main.scss';
+import '../styles/main.css';
 
 class Index extends React.Component {
   
