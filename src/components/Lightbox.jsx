@@ -2,7 +2,7 @@ import React from 'react';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
-import '../styles/lightbox.scss';
+import '../styles/lightbox.css';
 
 export default function Lightbox(props) {
   const [open, setOpen] = React.useState(false);
@@ -17,7 +17,7 @@ export default function Lightbox(props) {
 
   return (
     <div>
-      <img src={props.source} className='gallery-img' onClick={handleOpen} title={props.name} alt='' />
+      <img srcSet={props.source} className='gallery-img' onClick={handleOpen} title={props.name} alt='' />
         <div className='lightbox-wrapper'>
           <Modal
               aria-labelledby={props.source}
@@ -28,13 +28,13 @@ export default function Lightbox(props) {
               closeAfterTransition
               BackdropComponent={Backdrop}
               BackdropProps={{
-              timeout: 500,
+                timeout: 500,
               }}
           >
             <div className="img-lightbox">
               <TransformWrapper doubleClick={{mode: 'reset'}}>
                 <TransformComponent>
-                  <img src={props.source} className='zoomable' alt=""/>
+                  <img srcSet={props.source} className='zoomable' alt=""/>
                 </TransformComponent>
               </TransformWrapper>
               <div className='img-description'>

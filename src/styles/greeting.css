@@ -1,14 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap);
 
-$primary-font: 'Open Sans';
-$champagne: #FFE8D6;
-$sand: #DDBEA9;
-$brass: #CB997E;
-$ash: #B7B7A4;
-$artichoke: #A5A58D;
-$ebony: #6B705C;
-$eerie: #151612;
-
 #greeting {
     margin: 0;
     padding: 0;
@@ -33,7 +24,7 @@ $eerie: #151612;
 .greeting-title {
     font-size: 2em;
     margin: auto;
-    color: $champagne;
+    color: #FFE8D6;
 }
 
 #down-icon {
@@ -55,7 +46,7 @@ $eerie: #151612;
 }
 
 #top-button {
-    color: $champagne;
+    color: #FFE8D6;
 }
 
 @media only screen and (max-width: 982px) {

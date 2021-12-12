@@ -1,11 +1,3 @@
-$champagne: #FFE8D6;
-$sand: #DDBEA9;
-$brass: #CB997E;
-$ash: #B7B7A4;
-$artichoke: #A5A58D;
-$ebony: #6B705C;
-$eerie: #151612;
-
 #portfolio {
     margin-top: 100vh;
 }
@@ -22,7 +14,7 @@ $eerie: #151612;
 
 #section-header {
     margin: auto;
-    color: $ash;
+    color: #B7B7A4;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 1rem;

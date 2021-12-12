@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/contact.scss';
+import '../styles/contact.css';
 import { SiInstagram } from 'react-icons/si';
 import { FiMail } from 'react-icons/fi';
 

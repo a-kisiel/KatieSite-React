@@ -2,7 +2,7 @@ import { React } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { BsArrowDownShort } from 'react-icons/bs'
 import Fade from 'react-reveal';
-import '../styles/greeting.scss';
+import '../styles/greeting.css';
 
 export default function Bobbing(props) {
 

@@ -1,19 +1,8 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap);
 
-$primary-font: 'Open Sans';
-$champagne: #FFE8D6;
-$sand: #DDBEA9;
-$brass: #CB997E;
-$ash: #B7B7A4;
-$artichoke: #A5A58D;
-$ebony: #6B705C;
-$black-olive: #404337;
-$eerie: #151612;
-
-
 .menu-bar {
     width: 100%;
-    background-color: $eerie;
+    background-color: #151612;
     position: absolute;
     opacity: .8;
 }
@@ -22,7 +11,7 @@ $eerie: #151612;
     height: 60px;
     display: inline-flex;
     flex-direction: row;
-    background-color: $eerie;
+    background-color: #151612;
     float: right;
     padding-left: 5px;
     padding-right: 5px;
@@ -32,34 +21,34 @@ $eerie: #151612;
 #signature img {
     height: 60px;
     width: auto;
-    background-color: $eerie;
+    background-color: #151612;
     float: left;
 }
 
 .menu-item {
-    color: $ash;
+    color: #B7B7A4;
     text-decoration: none;
     padding-left: 10px;
     padding-right: 10px;
 }
 
 a.menu-item:hover {
-    color: $sand;
+    color: #DDBEA9;
 }
 
 #hamburger-icon {
-    color: $champagne;
+    color: #FFE8D6;
     font-size: 1.1em;
 }
 
 #accordion-button {
-    background-color: $eerie;
+    background-color: #151612;
     padding: 0;
     padding-right: 15px;
 }
 
 #accordion-details {
-    background-color: $eerie;
+    background-color: #151612;
 }
 
 .clear {
