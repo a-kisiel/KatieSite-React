@@ -12,7 +12,7 @@ function getWallpaper() {
 
     let wallpapers = importAll(require.context('../images/wallpapers/', false, /\.(jpe?g)$/));
     let w = {}
-    w.src = wallpapers[Math.floor(Math.random() * wallpapers.length)].default
+    w.src = wallpapers[Math.floor(Math.random() * wallpapers.length)]
     w.name = w.src.split('.')[0].split('static/')[1].split('-')[0].split('/')[1]
     w.name = w.name.replaceAll('_', ' ')
     return w

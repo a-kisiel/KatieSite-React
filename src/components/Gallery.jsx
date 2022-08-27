@@ -37,8 +37,8 @@ function createGallery(filter) {
     for (let image of artFiles) {
         let imgObj = {};
         // Start parsing out metadata from the img filename
-        imgObj.src = image.default;
-        let name = image.default.split('.')[0].split('static/')[1].split('-')[0].split('/')[1];
+        imgObj.src = image;
+        let name = image.split('.')[0].split('static/')[1].split('-')[0].split('/')[1];
         imgObj.medium = name.split('=')[1].replaceAll('_', ' ');
         // Gets all the available media
         if (!media.includes(imgObj.medium)) {
