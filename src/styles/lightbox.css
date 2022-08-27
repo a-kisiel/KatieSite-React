@@ -1,3 +1,5 @@
+body { overflow: auto !important; }
+
 .lightbox {
     margin: auto;
     background-color: transparent;
@@ -15,8 +17,9 @@
 
 .zoomable {
     display: block;
-    height: 80vh;
     object-fit: contain;
+    max-width: min(1400px, 80vw);
+    max-height: min(1000px, 80vh);
 }
 
 .img-description {

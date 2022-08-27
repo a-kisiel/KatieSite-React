@@ -24,6 +24,10 @@ body.footer {
     text-decoration: underline;
 }
 
+.footer p {
+    margin: 10px 0 40px 0;
+}
+
 #top {
     overflow-x: hidden;
 }
