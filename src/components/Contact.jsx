@@ -7,13 +7,16 @@ export default function Contact() {
     return (
         <div id='contact'>
             <div id='contacts-holder'>
-                <div className='contact-element'>
-                    <SiInstagram className='contact-icon'/>
-                    <a href='https://www.instagram.com/kmkisiel/' target='_blank' rel='noreferrer' className='external-link'>kmkisiel </a>
-                </div>
-                <div className='contact-element'>
-                    <FiMail className='contact-icon'/>
-                    <p>kmk15@alfred.edu</p>
+                <div className='commissions'>Commissions available upon request</div>
+                <div className='link-wrap'>
+                    <a href='https://www.instagram.com/kmkisiel/' target='_blank' rel='noreferrer' className='contact-element'>
+                        <SiInstagram className='contact-icon'/>
+                        <div className='external-link'>kmkisiel</div>
+                    </a>
+                    <a href='mailto:kmk15@alfred.edu' target='_blank' rel='noreferrer' className='contact-element'>
+                        <FiMail className='contact-icon'/>
+                        <div className='external-link'>kmk15@alfred.edu</div>
+                    </a>
                 </div>
             </div>
         </div>

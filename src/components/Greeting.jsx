@@ -23,33 +23,36 @@ var wall = getWallpaper();
 export default function Greeting () {
     const [opacity, setOpacity] = useState(1);
     const [desOpacity, setDesOpacity] = useState(1);
+    const [topacity, setTopacity] = useState(0);
     const [show, toggleComponent] = useState(false);
+    const finalBackgroundOpacity = .1;
 
     window.onscroll = () => {
         let yo = window.pageYOffset;
         let vh = window.innerHeight;
         if (yo > vh) {
-            setOpacity(0);
+            setOpacity(finalBackgroundOpacity);
+            setDesOpacity(0);
             return;
         }
-        setOpacity((vh - yo) / vh);
+        const o = (vh - yo) / vh - .4;
+        setOpacity(o >= finalBackgroundOpacity ? o : finalBackgroundOpacity);
         setDesOpacity((vh - yo) / (yo * 40));
+        setTopacity(1 - opacity - .4);
     }
 
     setTimeout(() => {
         toggleComponent(!show);
     }, 1800);
-
-    let topacity = Math.abs(1-opacity);
     
     return (
         <div>
             <MenuBar name={wall.name}/>
-            <div id='greeting' style={{ backgroundImage: `url(${wall.src})`, opacity: (opacity + .2)}}>
-                <div className='greeting-title-wrapper' style={{ opacity: desOpacity }}>
+            <div id='greeting' style={{ backgroundImage: `url(${wall.src})`, opacity: (opacity)}}>
+                <AnchorLink href='#portfolio' className='greeting-title-wrapper' style={{ opacity: desOpacity, textDecoration: 'none' }}>
                     <div className='greeting-title'>{wall.name}</div>
                     <Bobbing show={show}/>
-                </div>
+                </AnchorLink>
             </div>
             <AnchorLink id='top-button' href='#top'><BsArrowUpShort id='toTheTop' style={{ opacity: topacity }} /></AnchorLink>
         </div>
