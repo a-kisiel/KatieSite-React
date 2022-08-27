@@ -25,6 +25,7 @@ body.footer {
 }
 
 .footer p {
+    text-align: center;
     margin: 10px 0 40px 0;
 }
 
@@ -34,8 +35,4 @@ body.footer {
 
 .clear {
     clear: both;
-}
-
-@media screen and (max-width: 622px) {
-    
 }
