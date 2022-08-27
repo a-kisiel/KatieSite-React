@@ -1,7 +1,7 @@
-# A(nother) Portfolio Site for Katie
+#Portfolio Site
 
-I originally wrote this site as a Gatsby project, but found that I wanted a couple dynamic elements, so I transferred everything into a vanilla React App. 
+Site that displays Katie's art as a collection of tiles. Tiles are staggered, and their order is randomly generated. Each tile can be clicked to open a zoomable popup with the piece's information displayed.
 
-It's currently being hosted at katiekisiel.com.
+Currently being hosted at katiekisiel.com.
 
 NOTE: Last build was 1/11/21
