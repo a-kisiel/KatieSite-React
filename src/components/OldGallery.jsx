@@ -6,21 +6,6 @@ import '../styles/gallery.css';
 var media = [];
 var mediaSelections = [];
 
-// function importImages() {
-//     axios.get('https://' + credentials.cloudinary_key + ':' + credentials.cloudinary_secret + '@api.cloudinary.com/v1_1/akisiel/resources/')
-//         .then(imgs => {
-//             console.log(imgs)
-//         })
-//         .catch(err => {
-//             console.log(err)
-//         })
-//     let options = {
-//         max_results: 200,
-//         context: true,
-//         metadata: true
-//     }
-// }
-
 function createGallery(filter) {
     // Clear media lists (otherwise it duplicates everything each time it renders)
     media = []; mediaSelections = [];
@@ -37,8 +22,8 @@ function createGallery(filter) {
     for (let image of artFiles) {
         let imgObj = {};
         // Start parsing out metadata from the img filename
-        imgObj.src = image.default;
-        let name = image.default.split('.')[0].split('static/')[1].split('-')[0].split('/')[1];
+        imgObj.src = image;
+        let name = image.split('.')[0].split('static/')[1].split('-')[0].split('/')[1];
         imgObj.medium = name.split('=')[1].replaceAll('_', ' ');
         // Gets all the available media
         if (!media.includes(imgObj.medium)) {
