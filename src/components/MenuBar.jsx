@@ -10,7 +10,7 @@ function getSig() {
         return r.keys().map(r);
     }
     let sign = importAll(require.context('../signature/', false, /\.(png)$/));
-    return sign[0].default
+    return sign[0];
 }
 
 export default function MenuBar(props) {
