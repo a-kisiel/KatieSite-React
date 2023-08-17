@@ -109,10 +109,14 @@ async function initGalleryLocal() {
 
 function parseMetaDataFromTitle(art) {
     const metadata = art.split('=');
+    const date = (metadata[2].split('.')[0].indexOf('$') > -1) ?
+        metadata[2].split('.')[0].replaceAll('$', '/') :
+        metadata[2].split('.')[0].replaceAll('_', ' ');
+
     return {
         title: metadata[0].split('/')[1].replaceAll('_', ' '),
         medium: metadata[1].replaceAll('_', ' '),
-        date: metadata[2].split('.')[0].replaceAll('$', '/')
+        date
     }
 }
 
