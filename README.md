@@ -4,4 +4,4 @@ Site that displays Katie's art as a collection of tiles. Tiles are staggered, an
 
 #### Currently being hosted at katiekisiel.com.
 
-*NOTE: Last build was 8/17/23*
+*NOTE: Last build was 8/22/24*
