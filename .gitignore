@@ -11,15 +11,21 @@
 # production
 /build
 
+/src/images/
+
 # misc
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.eslintignore
+credentials.js
+metadata.json
+images_script.ps1
+NameFormatter.js
 LoginKey.pem.txt
-# credentials.js
-
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

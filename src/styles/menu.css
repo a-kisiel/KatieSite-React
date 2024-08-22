@@ -2,7 +2,7 @@
 
 .menu-bar {
     width: 100%;
-    background-color: #151612;
+    background-color: #212529;
     position: absolute;
     opacity: .8;
 }
@@ -11,7 +11,7 @@
     height: 60px;
     display: inline-flex;
     flex-direction: row;
-    background-color: #151612;
+    background-color: #212529;
     float: right;
     padding-left: 5px;
     padding-right: 5px;
@@ -21,34 +21,60 @@
 #signature img {
     height: 60px;
     width: auto;
-    background-color: #151612;
+    background-color: #212529;
     float: left;
 }
 
+#contact-button {
+    background-color: #212529;
+    position: relative;
+    min-height: 0;
+}
+.MuiCollapse-root { margin-right: -5px; }
+
+.contact-expanded {
+    display: flex; flex-direction: column;
+    background-color: #212529;
+    position: absolute;
+    top: 60px; left: -131px;
+    width: 224px; height: auto;
+    opacity: 1;
+    border-radius: 4px;
+    margin: -8px 0 0 auto;
+    padding: 8px 16px;
+    transition: top .2s, opacity .3s;
+}
+.MuiCollapse-hidden .contact-expanded { top: 30px; opacity: 0; }
+
+.contact-expanded a {
+    color: #E9ECEF;
+    padding: 4px;
+}
+
 .menu-item {
-    color: #B7B7A4;
+    color: #DEE2E6;
     text-decoration: none;
     padding-left: 10px;
     padding-right: 10px;
 }
 
 a.menu-item:hover {
-    color: #DDBEA9;
+    color: #DEE2E6;
 }
 
 #hamburger-icon {
-    color: #FFE8D6;
+    color: #DEE2E6;
     font-size: 1.1em;
 }
 
 #accordion-button {
-    background-color: #151612;
+    background-color: #212529;
     padding: 0;
     padding-right: 15px;
 }
 
 #accordion-details {
-    background-color: #151612;
+    background-color: #212529;
 }
 
 .clear {

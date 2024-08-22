@@ -1,0 +1,38 @@
+#atlas {
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    position: relative;
+    padding: 10px 0;
+    z-index: 10;
+    transition-property: margin-left;
+    transition-duration: 1s;
+}
+#atlas.hidden {
+    margin-left: -100vw;
+    height: 0;
+    z-index: 0;
+}
+
+#atlas .portfolio-link {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+#atlas.hidden .portfolio-link {
+    display: none;
+}
+
+#atlas .portfolio-link span {
+    display: flex;
+    margin-right: 5px;
+}
+
+@media (min-width: 425px) {
+    #atlas .portfolio-link {
+        font-size: 44px;
+    }
+}
