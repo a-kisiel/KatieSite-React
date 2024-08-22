@@ -1,20 +1,54 @@
+#back-home {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#back-home:hover .back-home-icon {
+    margin-left: -5px;
+    padding-right: 5px;
+    transition-property: all;
+    transition-duration: .5s;
+}
+
 #portfolio {
-    margin-top: 100vh;
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    min-height: 100vh;
+    transition-property: margin-left;
+    transition-duration: .4s;
+    z-index: 4;
+}
+#portfolio.hidden {
+    margin-left: 100vw;
+    height: 0;
+    min-height: 0;
+    z-index: 0;
+}
+#portfolio.hidden .collection-wrap {
+    transition: opacity .5s .5s;
+    opacity: 0;
 }
 
 #portfolio-header {
-    display: flex;
-    margin-left: 15%;
-    margin-right: 15%;
-    border-radius: 15px 15px 0 0;
+    display: flex; flex-direction: column;
     position: relative;
-    flex-direction: column;
+    max-width: 800px;
+    border-radius: 15px 15px 0 0;
+    margin: auto;
     padding: 2px;
 }
 
+#portfolio-header .filter-wrapper {
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+}
+
 #section-header {
+    display: flex; flex-direction: column;
     margin: auto;
-    color: #B7B7A4;
+    color: #212529;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 1rem;
@@ -23,24 +57,64 @@
 }
 
 #selector {
-    width: 70%;
-    max-width: 625px;
-    margin: 15px auto 15px auto;
+    width: 100%;
+    margin: 15px 0 15px auto;
     z-index: 6;
+}
+#selector.hidden {
+    display: none;
+}
+
+.collection-header {
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    max-width: 800px;
+    padding: 4px 8px;
+    margin: auto;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: .2s;
+}
+.collection-header:hover { background-color: #CED4DA; }
+
+.collection-title {
+    font-size: 18px;
 }
 
 .gallery-wrapper {
     columns: 5 200px;
     column-gap: 1rem;
     position: relative;
-    scrollbar-width: none;
     border-radius: 5px;
-    background-color: rgba(15, 16, 12, .8);
-    margin: 0 auto;
-    padding: 40px 50px 40px 40px;
-    max-width: 1200px;
+    width: 100%; height: 100%;
     min-height: 100vh;
-    width: 90%;
+    height: auto; min-height: 0;
+    max-width: 800px;
+    padding: 15px 0;
+    margin: auto;
+    margin-top: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transition-property: all;
+    transition-duration: .2s;
+}
+.gallery-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.collection-wrap {
+    height: auto;
+    margin: 0 20px;
+    transition: opacity .5s .5s;
+}
+
+.collection-wrap.collapsed .gallery-wrapper {
+    height: 0;
+    min-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .box {
@@ -57,25 +131,62 @@
     z-index: 1;
     margin: 5px;
 }
-
+.collection-wrap.collapsed .gallery-wrapper .gallery-img {
+    transition-duration: .1s;
+    transition-property: all;
+    height: 0;
+    opacity: 0;
+}
 .gallery-img:hover {
     opacity: .6;
-    transition-duration: 200ms;
+    transition-duration: .2s;
 }
-
-.gallery-img.loader {
+.gallery-img-title {
+    color: #DEE2E6;
+    background-color: #343A40;
+    position: relative;
+    text-align: center;
+    font-size: 10px;
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+    padding: 4px 0;
+    opacity: .8;
+    z-index: 8;
+    
+    width: 0%;
+    margin: -35px auto auto auto;
     display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.3s all;
+}
+.collection-wrap:not(.collapsed) .gallery-img-wrap:hover .gallery-img-title {
+    width: 100%;
+    margin-left: 5px;
 }
 
-.gallery-img.loader img {
-    margin: auto;
-    width: 100px;
+.react-transform-component {
+    width: 100%;
 }
-
-.gallery-img.loader img:last-of-type {display: none !important;}
 
 .clear {
     clear: both;
+}
+
+@media (min-width: 767px) {
+    #portfolio-header .filter-wrapper { flex-direction: row; }
+
+    .collection-header { flex-direction: row; }
+
+    .collection-title { font-size: 28px; }
+
+    #selector {
+        width: 50%;
+        max-width: 50%;
+    }
+
+    .gallery-img-title { font-size: 14px; }
 }
 
 @media only screen and (max-width: 982px) {
@@ -83,12 +194,18 @@
         margin-left: 2%;
         margin-right: 2%;
     }
+
+    .collection-header {
+        margin: 0 2%;
+    }    
     
     .gallery-wrapper {
+        height: 100%;
+        max-width: 800px;
+        /* max-height: 100vh; */
         columns: 3 100px;
         column-gap: 1rem;
         overflow-y: scroll;
-        height: 100%;
-        padding: 3% 4% 3% 3%;
+        margin: auto;
     }
 }

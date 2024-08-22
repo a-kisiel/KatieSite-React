@@ -10,18 +10,16 @@
     $ebony: #6B705C;
     $black-olive: #404337;
     $eerie: #151612;
+
+    Monochrome: https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529
 */
 
 body {
     margin: 0;
     font: 100% 'Open Sans';
-    color: #FFE8D6;
-    background-color: #151612;
-}
-
-body.footer {
-    text-align: center;
-    text-decoration: underline;
+    color: #212529;
+    background-color: #E9ECEF;
+    overflow-x: hidden;
 }
 
 .footer p {
@@ -30,7 +28,7 @@ body.footer {
 }
 
 #top {
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .clear {

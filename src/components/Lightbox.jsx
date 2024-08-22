@@ -9,14 +9,14 @@ export default function Lightbox(props) {
   const [loaded, setLoaded] = React.useState(false);
 
   // Helper for importing loader
-  function importAll(r) {
-    return r.keys().map(r);
-  }
-  const loaderUrl = importAll(require.context('../images/icons/', false, /\.(svg)$/))[0].default;
+  // function importAll(r) {
+  //   return r.keys().map(r);
+  // }
+  // const loaderUrl = importAll(require.context('../images/icons/', false, /\.(svg)$/))[0].default;
 
-  const loadingComplete = () => {
-    setLoaded(true);
-  }
+  // const loadingComplete = () => {
+  //   setLoaded(true);
+  // }
 
   const handleOpen = () => {
     setOpen(true);
@@ -27,51 +27,40 @@ export default function Lightbox(props) {
   };
 
   return (
-    <div>
-      <div className='gallery-img loader'>
-        <img
-          src={loaderUrl}
-          data-src={props.source}
-          title={props.name}
-          style={{display: !loaded ? 'flex' : 'none'}}
-          onClick={handleOpen}
-          alt='' />
-      </div>
+    <div className='gallery-img-wrap'>
       <img
+        onClick={handleOpen}
         srcSet={props.source}
         className='gallery-img'
-        title={props.name}
-        style={{display: loaded ? 'flex' : 'none'}}
-        onClick={handleOpen}
-        onLoad={loadingComplete}
-        alt='' />
-      <div className='lightbox-wrapper'>
-        <Modal
-            aria-labelledby={props.source}
-            aria-describedby="transition-modal-description"
-            className='lightbox'
-            open={open}
-            onClose={handleClose}
-            closeAfterTransition
-            BackdropComponent={Backdrop}
-            BackdropProps={{
-              timeout: 500,
-            }}
-        >
-          <div className="img-lightbox">
-            <TransformWrapper doubleClick={{mode: 'reset'}}>
-              <TransformComponent>
-                <img srcSet={props.source} className='zoomable' alt=""/>
-              </TransformComponent>
-            </TransformWrapper>
-            <div className='img-description'>
-              <h2 className="img-title">{props.name}</h2>
-              <h2 className='img-medium'>{props.medium}</h2>
-              <h2 className='img-date'>{props.date}</h2>
+        aria-label={props.name}
+        alt={props.name}
+      />
+      <div className='gallery-img-title'>{props.name}</div>
+        <div className='lightbox-wrapper'>
+          <Modal
+              className='lightbox'
+              open={open}
+              onClose={handleClose}
+              closeAfterTransition
+              BackdropComponent={Backdrop}
+              BackdropProps={{
+                timeout: 500,
+              }}
+          >
+            <div className="img-lightbox">
+              <TransformWrapper doubleClick={{mode: 'reset'}}>
+                <TransformComponent>
+                  <img srcSet={props.source} className='zoomable' alt=""/>
+                </TransformComponent>
+              </TransformWrapper>
+              <div className='img-description'>
+                <h2 className="img-title">{props.name}</h2>
+                <h2 className='img-media'>{props.media?.join(', ')}</h2>
+                <h2 className='img-date'>{props.date}</h2>
+              </div>
             </div>
-          </div>
-        </Modal>
-      </div>
+          </Modal>
+        </div>
     </div>
   );
 }

@@ -34,21 +34,21 @@ body { overflow: auto !important; }
 .img-title {
     margin: 0;
     margin-right: auto;
-    color: #FFE8D6;
+    color: #E9ECEF;
     font-size: 1rem;
 }
 
-.img-medium {
+.img-media {
     margin: 0;
     margin-right: auto;
-    color: white;
+    color: #F8F9FA;
     font-size: .8rem;
 }
 
 .img-date {
     margin: 0;
     margin-right: auto;
-    color: white;
+    color: #F8F9FA;
     font-size: .8rem;
 }
 
