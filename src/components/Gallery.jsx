@@ -78,7 +78,7 @@ export default function Gallery(props) {
             }
             const image = images[k];
             const webpVersion = `https://katieart.s3.us-east-2.amazonaws.com/hashed_compressed/${image.hash}.webp`;
-            const pngVersion = `https://katieart.s3.us-east-2.amazonaws.com/uncompressed/${image.hash}.png`;
+            const pngVersion = `https://katieart.s3.us-east-2.amazonaws.com/hashed_uncompressed/${image.hash}.jpg`;
             const imgObj = {
                 hash: image.hash,
                 srcset: props.webp ? `${webpVersion}, ${pngVersion}` : `${pngVersion}, ${webpVersion}`,

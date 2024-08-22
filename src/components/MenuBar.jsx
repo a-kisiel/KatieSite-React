@@ -51,7 +51,7 @@ export default function MenuBar(props) {
                                 <AccordionDetails className='contact-expanded'>
                                     <a href='https://www.instagram.com/kmkisiel/' target='_blank' rel='noreferrer' className='external-link'><SiInstagram className='contact-icon'/> kmkisiel</a>
                                     <a href='mailto:katiekisiel6@gmail.com' target='_blank' rel='noreferrer' className='external-link'><FiMail className='contact-icon'/> katiekisiel6@gmail.com</a>
-                                    <a href="" target='_blank' rel='noreferrer' className='external-link'><FaEtsy className='contact-icon' /> Store</a>
+                                    <a href="" target='_blank' rel='noreferrer' className='external-link' style={{pointerEvents : 'none', opacity: '.5'}}><FaEtsy className='contact-icon' /> Store (coming soon)</a>
                                 </AccordionDetails>
                             </Accordion>
                         </div>
